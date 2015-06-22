@@ -4,14 +4,15 @@
 
 > _[RefluxJS](https://github.com/spoike/refluxjs)_
 
+## Demo
+
+http://jser.me/refluxjs-webpack-todo/#/
 
 ## Implementation
 
 TODO
 
 ## Running
-
-Install dependencies with bower and npm. You'll first need to have [bower](http://bower.io/) and [npm](npmjs.org) installed to do so. Then run the following:
 
 ```
 npm install

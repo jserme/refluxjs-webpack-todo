@@ -1,5 +1,6 @@
 var React = require('react/addons')
 var Actions = require('../actions')
+var classNames = require('classnames')
 
 module.exports = React.createClass({
    propTypes: {
@@ -51,7 +52,7 @@ module.exports = React.createClass({
     console.log(this.props.id)
    },
    render: function() {
-       var classes = React.addons.classSet({
+       var classes = classNames({
            'completed': this.props.isComplete,
            'editing': this.state.isEditing
        });

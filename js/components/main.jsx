@@ -2,6 +2,7 @@ var React = require('react/addons')
 var ReactRouter = require('react-router')
 var Item = require('./item.jsx')
 var Actions = require('../actions')
+var classNames = require('classnames')
 module.exports = React.createClass({
     mixins: [ ReactRouter.State ],
     propTypes: {
@@ -23,7 +24,7 @@ module.exports = React.createClass({
                 filteredList = this.props.list;
         }
 
-        var classes = React.addons.classSet({
+        var classes = classNames({
             "hidden": this.props.list.length < 1
         })
 

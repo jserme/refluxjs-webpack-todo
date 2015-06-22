@@ -1,6 +1,7 @@
 var React = require('react/addons')
 var ReactRouter = require('react-router')
 var Actions = require('../actions')
+var classNames = require('classnames')
 module.exports = React.createClass({
     propTypes: {
         list: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
@@ -9,8 +10,8 @@ module.exports = React.createClass({
         var nbrcompleted = _.filter(this.props.list, "isComplete").length,
             nbrtotal = this.props.list.length,
             nbrincomplete = nbrtotal-nbrcompleted,
-            clearButtonClass = React.addons.classSet({hidden: nbrcompleted < 1}),
-            footerClass = React.addons.classSet({hidden: !nbrtotal }),
+            clearButtonClass = classNames({hidden: nbrcompleted < 1}),
+            footerClass = classNames({hidden: !nbrtotal }),
             completedLabel = "Clear completed (" + nbrcompleted + ")",
             itemsLeftLabel = nbrincomplete === 1 ? " item left" : " items left";
         return (
